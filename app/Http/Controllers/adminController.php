@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\categories;
+use App\movies;
 
 class adminController extends Controller
 {
@@ -15,7 +17,7 @@ class adminController extends Controller
     {
         //
         return view('admin.home');
-        return view('admin.categories');
+//        return view('admin.categories');
     }
 
     /**
@@ -37,6 +39,19 @@ class adminController extends Controller
     public function store(Request $request)
     {
         //
+        $movie = new movies;
+        $movie->title = $request->movie_name;
+        $movie->description = $request->movie_desc;
+        $title= $request->category_id;
+//        $category_id = (integer)categories::where('title','=',$title)->get(['id']);
+        $movie->categories_id = $title;
+        $request->file('image_cover');
+        $request->image_cover->store('public');
+        $movie->save();
+        return redirect('categories');
+        //$request->image->store('public')
+
+
     }
 
     /**
@@ -48,6 +63,8 @@ class adminController extends Controller
     public function show($id)
     {
         //
+
+
     }
 
     /**

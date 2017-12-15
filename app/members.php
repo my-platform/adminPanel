@@ -8,7 +8,7 @@ class members extends Model
 {
     //
     public $table='members';
-    public function categories(){
-        return $this->hasOne(Categories::class);
+    public function movies(){
+        return $this->hasManyThrough(Movies::class, Categories::class);
     }
 }

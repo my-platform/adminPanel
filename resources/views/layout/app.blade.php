@@ -451,6 +451,7 @@
         <!-- Main content -->
         <section class="content">
             @section('content')
+
                 @show
         </section>
         <!-- /.content -->

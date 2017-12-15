@@ -11,7 +11,7 @@
                         <B><h1>Comedy</h1></B>
 
                        <div class="row" style="padding-top:50px"> <a href="#" class="btn btn-success"><i class="fa fa-folder"></i></a>
-                        <a href="#" class="btn btn-success"><i class="fa fa-plus"></i></a>
+                        <a href="categories/add" class="btn btn-success"><i class="fa fa-plus"></i></a>
                         <a href="#" class="btn btn-success"><i class="fa fa-edit"></i></a>
                         <a href="#" class="btn btn-danger"><i class="fa fa-trash-o"></i></a></div>
                     </div>

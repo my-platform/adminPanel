@@ -18,4 +18,7 @@ Route::resource('home','adminController');
 Route::get('categories', function () {
     return view('admin.categories');
 });
+Route::get('categories/add', 'customControls@getList');
+Route::post('/save','customControls@store');
+
 

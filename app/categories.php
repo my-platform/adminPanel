@@ -8,7 +8,5 @@ class categories extends Model
 {
     //
     public $table = 'categories';
-    public function movies(){
-        return $this->hasOne(Movies::class);
-    }
+
 }
