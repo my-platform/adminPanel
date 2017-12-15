@@ -32,7 +32,7 @@ class customControls extends Controller
         $movie->image = Storage::url($request->file('image_cover')->store('public'));
         $movie->status = 'nothing';
         $movie->save();
-        return redirect('categories');
+        return redirect('Movies');
         //$request->image->store('public')
 
 

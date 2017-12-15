@@ -20,5 +20,6 @@ Route::get('categories', function () {
 });
 Route::get('categories/add', 'customControls@getList');
 Route::post('/save','customControls@store');
+Route::get('/Movies','adminController@getMovies');
 
 

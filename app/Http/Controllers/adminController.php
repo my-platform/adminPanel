@@ -29,6 +29,10 @@ class adminController extends Controller
     {
         //
     }
+    public function getMovies(){
+        $movies = movies::all();
+        return view('admin.movies',compact('movies'));
+    }
 
     /**
      * Store a newly created resource in storage.

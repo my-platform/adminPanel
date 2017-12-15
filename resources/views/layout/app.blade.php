@@ -408,6 +408,13 @@
 
                 {{-- this the one--}}
                 <li>
+                    <a href="/Movies">
+                        <i class="fa fa-file-movie-o"></i> <span>Movies</span>
+                    </a>
+                </li>
+                {{--end--}}
+                {{-- this the one--}}
+                <li>
                     <a href="/categories">
                         <i class="fa fa-th"></i> <span>Categories</span>
                     </a>
