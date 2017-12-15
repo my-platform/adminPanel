@@ -11,15 +11,15 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
-Route::resource('home','adminController');
-Route::get('categories', function () {
-    return view('admin.categories');
-});
-Route::get('categories/add', 'customControls@getList');
-Route::post('/save','customControls@store');
-Route::get('/Movies','adminController@getMovies');
+});*/
+Route::resource('/movies','adminController');
+Route::resource('/categories','categoryController');
+//Route::get('/categories', 'customControls@getCategories');
+Route::get('/add', 'customControls@addMovie');
+//Route::post('/save','customControls@store');
+//Route::get('/Movies','customControls@getMovies');
+//Route::resource('/Movies','adminController');
 
 

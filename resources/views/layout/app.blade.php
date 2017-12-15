@@ -408,7 +408,7 @@
 
                 {{-- this the one--}}
                 <li>
-                    <a href="/Movies">
+                    <a href="/movies">
                         <i class="fa fa-file-movie-o"></i> <span>Movies</span>
                     </a>
                 </li>

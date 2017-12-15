@@ -9,10 +9,22 @@ use Illuminate\Support\Facades\Storage;
 class customControls extends Controller
 {
     //
-    public function getList(){
+    public function addMovie(){
 
         $category = categories::all();
         return view('admin.addMovie', compact('category'));
+    }
+    public function getMovies(){
+        $movies = movies::all();
+        return view('admin.movies',compact('movies'));
+    }
+    public function editMovie($id){
+        return view('admin.editMovie');
+    }
+    public function getCategories(){
+
+        $category = categories::all();
+        return view('admin.Categories', compact('category'));
     }
     public function store(Request $request)
     {

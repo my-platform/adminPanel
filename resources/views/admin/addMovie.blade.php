@@ -2,21 +2,23 @@
 @section('content')
     
    <div class="row"> <div class="col-md-6 col-md-offset-3 ">
-        <center><h3 class="alert alert-info"> Add a new Movie</h3>
+        <center><h3 class="alert alert-info"> {{substr(Route::currentRouteName(),7)}} Movie</h3>
         </center>
     </div>
     <div class="col-md-8 col-md-offset-2">
-        <form class="form-horizontal" method="POST" enctype="multipart/form-data" action="/save">
+        <form class="form-horizontal" method="POST" enctype="multipart/form-data" action="/movies/@yield('movieId')">
                     {{csrf_field()}}
+            @section('editMethod')
+                @show
                 <div class="form-group">
                     <label for="exampleInputEmail1">Movie's Name:</label>
-                    <input type="text" name="movie_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    <input type="text" value="@yield('movieName')" name="movie_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                            placeholder="Enter The name of movie">
                 </div>
 
             <div class="form-group">
                 <label for="exampleTextarea">Description:</label>
-                <textarea class="form-control" name="movie_desc" id="exampleTextarea" rows="3"></textarea>
+                <textarea class="form-control" name="movie_desc" id="exampleTextarea" rows="3">@yield('movieDescription')</textarea>
             </div>
                 <div class="form-group">
                     <label for="exampleSelect1">Category:</label>
